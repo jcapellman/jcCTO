@@ -1,31 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 using jcCTO.PCL;
+using jcCTO.Tests.PCL;
 
 namespace jcCTO.ConsoleTest {
     class Program {
-        [DataContract]
-        public struct Users {
-            [DataMember]
-            public string Username { get; set; }
-           
-            [DataMember]
-            public int ID { get; set; }
+        public class Testing
+        {
+            public async void Run(int num)
+            {
+                var httpClient = new CTOWebAPIHandler();
+
+                var data = await httpClient.Get<List<UserListingResponseItem>>($"http://localhost:13833/api/User?num={num}");
+
+                foreach (var item in data) {
+                    Console.WriteLine($"ID:{item.ID}|Name:{item.Name}");
+                }
+            }
         }
-
+        
         static void Main(string[] args) {
-            var test = new Users {
-                ID = 1,
-                Username = "Testing"
-            };
-            
-            var response = new CTOResponseItem<Users>(test);
+            var test = new Testing();
 
-            Console.WriteLine($"Binary: {response.ToBytes(false).Length}");
-            Console.WriteLine($"Binary Gzip: {response.ToBytes().Length}");
-            Console.WriteLine($"Bson: {response.ToBSON().Length}");
-            Console.WriteLine($"Json: {response.ToJson().Length * sizeof(Char)}");
-            
+            test.Run(100);
+
             Console.ReadKey();
         }
     }
