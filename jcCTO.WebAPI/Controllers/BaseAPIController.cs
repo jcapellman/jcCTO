@@ -4,8 +4,8 @@ using jcCTO.PCL;
 
 namespace jcCTO.WebAPI.Controllers {
     public class BaseAPIController : ApiController {
-        public byte[] Return<T>(T obj) {
-            return new CTOResponseItem<T>(obj).ToBytes(false);
-        } 
+        public CTOResponseItem<T> Return<T>(T obj) {
+            return new CTOResponseItem<T>(obj, compress:false);
+        }
     }
 }

@@ -10,9 +10,9 @@ namespace jcCTO.ConsoleTest {
         {
             public async void Run(int num)
             {
-                var httpClient = new CTOWebAPIHandler();
+                var httpClient = new CTOWebAPIHandler("http://192.168.1.212/api/");
 
-                var data = await httpClient.Get<List<UserListingResponseItem>>($"http://localhost:13833/api/User?num={num}");
+                var data = await httpClient.Get<List<UserListingResponseItem>>("User");
 
                 foreach (var item in data) {
                     Console.WriteLine($"ID:{item.ID}|Name:{item.Name}");
