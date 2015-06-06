@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcCTO.ConsoleTest", "jcCTO.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcCTO.PCL", "jcCTO.PCL\jcCTO.PCL.csproj", "{034A5602-A7AB-4A98-9D1B-785DAEE73D6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcCTO.Tests.PCL", "jcCTO.Tests.PCL\jcCTO.Tests.PCL.csproj", "{C55C4CC9-E82C-4A20-BC5A-4C5530E6763F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{034A5602-A7AB-4A98-9D1B-785DAEE73D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{034A5602-A7AB-4A98-9D1B-785DAEE73D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{034A5602-A7AB-4A98-9D1B-785DAEE73D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55C4CC9-E82C-4A20-BC5A-4C5530E6763F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55C4CC9-E82C-4A20-BC5A-4C5530E6763F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55C4CC9-E82C-4A20-BC5A-4C5530E6763F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55C4CC9-E82C-4A20-BC5A-4C5530E6763F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
+
 using jcCTO.PCL;
 using jcCTO.Tests.PCL;
 
 namespace jcCTO.ConsoleTest {
     class Program {
-        public class Testing
-        {
-            public async void Run(int num)
-            {
+        public class Testing {
+            public async void Run(int num) {
                 var httpClient = new CTOWebAPIHandler("http://192.168.1.212/api/");
 
                 var data = await httpClient.Get<List<UserListingResponseItem>>("User");
@@ -19,7 +17,7 @@ namespace jcCTO.ConsoleTest {
                 }
             }
         }
-        
+
         static void Main(string[] args) {
             var test = new Testing();
 

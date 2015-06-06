@@ -69,6 +69,10 @@
       <Project>{034a5602-a7ab-4a98-9d1b-785daee73d6b}</Project>
       <Name>jcCTO.PCL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\jcCTO.Tests.PCL\jcCTO.Tests.PCL.csproj">
+      <Project>{c55c4cc9-e82c-4a20-bc5a-4c5530e6763f}</Project>
+      <Name>jcCTO.Tests.PCL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
